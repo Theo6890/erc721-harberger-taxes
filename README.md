@@ -1,15 +1,38 @@
-## Foundry
+# Harberger Tax NFT
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+An ERC721 implementation with Harberger Tax logic (Partial Common Ownership).
 
-Foundry consists of:
+## Features
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+- **Self-Assessed Pricing**: Owners set their own price.
+- **Continuous Tax**: 10% annual tax on the self-assessed price.
+- **Foreclosure**: Tokens with insufficient tax deposits are seized by the protocol.
 
-## Documentation
+## Installation
+
+```bash
+forge install
+```
+
+## Compilation
+
+```bash
+forge build
+```
+
+## Testing
+
+Run the comprehensive test suite:
+
+```bash
+forge test
+```
+
+## Design
+
+See [DESIGN.md](./DESIGN.md) for details on the tax model and trade-offs.
+
+## Foundry Documentation
 
 https://book.getfoundry.sh/
 

@@ -1,0 +1,33 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["dependencies"]
+remappings = [
+    "forge-std/=dependencies/forge-std-1.11.0/src/",
+    "solady=dependencies/solady-0.1.26/src/",
+]
+solc = '0.8.28'
+optimizer = true
+optimizer_runs = 100_000
+test = 'test'
+
+[fmt]
+single_line_statement_blocks = "single"
+sort_imports = true
+contract_new_lines = false
+override_spacing = false
+number_underscore = "thousands"
+
+[soldeer]
+remappings_generate = true
+remappings_regenerate = false
+remappings_version = false
+remappings_prefix = ""
+remappings_location = "config"
+recursive_deps = false
+
+[dependencies]
+forge-std = "1.11.0"
+solady = "0.1.26"
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
